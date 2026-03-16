@@ -155,15 +155,17 @@ button { cursor:pointer; font-family:inherit; border:none; background:none; }
   gap:16px;
 }
 .nav-logo {
-  font-family:'Tenor Sans', serif;
-  font-size:1.22rem;
-  color:var(--ink);
-  letter-spacing:0.06em;
   flex-shrink:0;
-  cursor:default;
-  white-space:nowrap;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
 }
-.nav-logo span { color:var(--blush); }
+.nav-logo img {
+  height:48px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+}
 
 /* desktop links */
 .nav-links {
@@ -333,6 +335,13 @@ button { cursor:pointer; font-family:inherit; border:none; background:none; }
   max-width:var(--max);
   margin:0 auto;
   width:100%;
+}
+.hero-logo {
+  height:clamp(80px, 14vw, 140px);
+  width:auto;
+  margin-bottom:28px;
+  filter:brightness(0) invert(1);
+  opacity:0.92;
 }
 .hero-eyebrow {
   font-size:0.68rem;
@@ -806,14 +815,17 @@ footer {
   gap:clamp(30px,4vw,56px);
 }
 .f-brand-logo {
-  font-family:'Tenor Sans',serif;
-  font-size:1.3rem;
-  color:#fff;
-  letter-spacing:0.06em;
-  margin-bottom:14px;
   display:block;
+  margin-bottom:14px;
 }
-.f-brand-logo span { color:var(--blush-lt); }
+.f-brand-logo img {
+  height:52px;
+  width:auto;
+  object-fit:contain;
+  /* brighten the logo on the dark footer background */
+  filter:brightness(0) invert(1);
+  opacity:0.85;
+}
 .f-desc { font-size:0.8rem; line-height:1.78; color:rgba(255,255,255,0.38); max-width:240px; margin-bottom:20px; }
 .f-contact-line { font-size:0.78rem; color:rgba(255,255,255,0.45); margin-bottom:6px; transition:color 0.18s; }
 .f-contact-line a { color:inherit; }
@@ -946,7 +958,9 @@ footer {
 ════════════════════════════════════════════ -->
 <div class="nav-outer">
   <div class="nav-inner">
-    <div class="nav-logo">Reflections <span>of Beauty</span></div>
+    <a href="#home" class="nav-logo">
+      <img src="images/logo.png" alt="Reflections of Beauty"/>
+    </a>
 
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -958,11 +972,11 @@ footer {
         </ul>
       </li>
       <li><a href="#products">Products</a></li>
-      <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">https://reflectionsofbeautyva.brilliantc</a></li>
+      <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">Shop</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#plans">Payment Plans</a></li>
-      <li><a href="#contact">Contact</a></li>
       <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="nav-book">Book Now</a></li>
     </ul>
 
@@ -976,14 +990,13 @@ footer {
 <nav class="mobile-drawer" id="mobileDrawer" role="navigation" aria-label="Mobile navigation">
   <a class="mob-link" href="#home" onclick="closeDrawer()">Home</a>
   <a class="mob-link" href="#about" onclick="closeDrawer()">About</a>
-  <a class="mob-link sub" href="#about" onclick="closeDrawer()">About</a>
-  <a class="mob-link sub" href="#ceo" onclick="closeDrawer()">CEO</a>
+  <a class="mob-link sub" href="#ceo" onclick="closeDrawer()">— CEO</a>
   <a class="mob-link" href="#products" onclick="closeDrawer()">Products</a>
-  <a class="mob-link" href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener" onclick="closeDrawer()">https://reflectionsofbeautyva.brilliantc</a>
+  <a class="mob-link" href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener" onclick="closeDrawer()">Shop</a>
   <a class="mob-link" href="#services" onclick="closeDrawer()">Services</a>
   <a class="mob-link" href="#plans" onclick="closeDrawer()">Payment Plans</a>
-  <a class="mob-link" href="#contact" onclick="closeDrawer()">Contact</a>
   <a class="mob-link" href="#events" onclick="closeDrawer()">Events</a>
+  <a class="mob-link" href="#contact" onclick="closeDrawer()">Contact</a>
   <a class="mob-book" href="#contact" onclick="closeDrawer()">Book Now</a>
 </nav>
 
@@ -1000,6 +1013,7 @@ footer {
     />
     <div class="hero-overlay"></div>
     <div class="hero-content wrap">
+      <img src="images/logo.png" alt="Reflections of Beauty" class="hero-logo"/>
       <p class="hero-eyebrow">Virginia's Premier Medical Aesthetics</p>
       <h1 class="t-display">Revitalizing<br><em>Radiance</em></h1>
       <p class="hero-sub">Injectables · Facials · Hair Restoration · Skincare</p>
@@ -1047,7 +1061,7 @@ footer {
           src="https://static.wixstatic.com/media/4011704d8ef941c6b1b362b46800220f.jpg/v1/fill/w_288,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4011704d8ef941c6b1b362b46800220f.jpg"
           alt="Botox Injections" loading="lazy"/>
         <div class="svc-card-body">
-          <div class="svc-card-name">Injectionables &amp; Fillers</div>
+          <div class="svc-card-name">Injectables &amp; Fillers</div>
           <p class="svc-card-text">Botox from $15/unit · Juvederm Ultra XC · Volbella · Voluma. Expert injectable treatments for natural-looking results.</p>
           <span class="svc-card-link">View Services</span>
         </div>
@@ -1484,7 +1498,7 @@ footer {
 <footer>
   <div class="footer-top">
     <div>
-      <span class="f-brand-logo">Reflections <span>of Beauty</span></span>
+      <a href="#home" class="f-brand-logo"><img src="images/logo.png" alt="Reflections of Beauty"/></a>
       <p class="f-desc">Virginia's trusted provider of medical aesthetics, injectables, facial rejuvenation, hair restoration, and professional-grade SkinMedica® skincare.</p>
       <p class="f-contact-line"><a href="tel:5715834479">Phone: (571) 583-4479</a></p>
       <p class="f-contact-line"><a href="mailto:ethnicprideva@gmail.com">Email: ethnicprideva@gmail.com</a></p>
@@ -1494,16 +1508,16 @@ footer {
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#ceo">— CEO</a></li>
         <li><a href="#products">Products</a></li>
-        <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">https://reflectionsofbeautyva.brilliantc</a></li>
+        <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">Shop</a></li>
+        <li><a href="#services">Services</a></li>
       </ul>
     </div>
     <div class="f-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="#services">Injectionables &amp; Fillers</a></li>
+        <li><a href="#services">Injectables &amp; Fillers</a></li>
         <li><a href="#services">Facial Rejuvenation</a></li>
         <li><a href="#services">Hair Restoration</a></li>
         <li><a href="#plans">Payment Plans</a></li>
@@ -1523,7 +1537,7 @@ footer {
   </div>
   <div class="footer-bottom">
     <p>Reflections of Beauty &nbsp;·&nbsp; Email: <a href="mailto:ethnicprideva@gmail.com" style="color:inherit;">ethnicprideva@gmail.com</a> &nbsp;·&nbsp; Phone: (571) 583-4479</p>
-    <p class="footer-update">Website Updated 8/07/24</p>
+    <p class="footer-update">Website Updated 3/16/26</p>
   </div>
 </footer>
 
