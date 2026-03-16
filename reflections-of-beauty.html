@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Reflections Of Beauty VA | Revitalizing Radiance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+
+/* ─────────────────────────────────────────
+   TOKENS
+───────────────────────────────────────── */
+:root {
+  --ink:      #1c1614;
+  --ink-soft: #4a3830;
+  --muted:    #8a7068;
+  --rule:     #e2d4ce;
+  --bg:       #faf6f3;
+  --bg-alt:   #f3ece7;
+  --white:    #ffffff;
+  --blush:    #c4847a;
+  --blush-dk: #a3635a;
+  --blush-lt: #e8b4ae;
+  --sand:     #b49a7a;
+  --sand-lt:  #d4be9e;
+  --nav-h:    64px;
+  --max:      1120px;
+  --pad:      clamp(20px, 5vw, 60px);
+}
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body {
+  font-family:'Raleway', sans-serif;
+  font-weight:400;
+  font-size:16px;
+  background:var(--bg);
+  color:var(--ink);
+  overflow-x:hidden;
+  line-height:1.65;
+}
+img { display:block; max-width:100%; height:auto; }
+a { color:inherit; text-decoration:none; }
+button { cursor:pointer; font-family:inherit; border:none; background:none; }
+
+/* ─────────────────────────────────────────
+   TYPOGRAPHY HELPERS
+───────────────────────────────────────── */
+.t-display {
+  font-family:'Tenor Sans', serif;
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:0.02em;
+}
+.t-label {
+  font-size:0.68rem;
+  font-weight:600;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--blush);
+}
+.t-body {
+  font-size:0.93rem;
+  color:var(--muted);
+  line-height:1.8;
+  font-weight:400;
+}
+
+/* ─────────────────────────────────────────
+   LAYOUT HELPERS
+───────────────────────────────────────── */
+.wrap { max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+.rule { width:40px; height:1.5px; background:var(--blush); display:block; }
+.rule-center { margin:0 auto; }
+
+/* ─────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────── */
+.btn {
+  display:inline-block;
+  font-family:'Raleway', sans-serif;
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  padding:13px 30px;
+  transition:all 0.22s ease;
+  white-space:nowrap;
+}
+.btn-solid {
+  background:var(--blush);
+  color:#fff;
+  border:1.5px solid var(--blush);
+}
+.btn-solid:hover { background:var(--blush-dk); border-color:var(--blush-dk); }
+.btn-ghost {
+  background:transparent;
+  color:var(--ink);
+  border:1.5px solid var(--ink);
+}
+.btn-ghost:hover { background:var(--ink); color:#fff; }
+.btn-ghost-white {
+  background:transparent;
+  color:#fff;
+  border:1.5px solid rgba(255,255,255,0.6);
+}
+.btn-ghost-white:hover { background:#fff; color:var(--ink); }
+
+/* ─────────────────────────────────────────
+   TOP ALERT BAR
+───────────────────────────────────────── */
+.alert-bar {
+  background:var(--ink);
+  color:rgba(255,255,255,0.75);
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-align:center;
+  padding:8px 20px;
+  line-height:1.6;
+}
+.alert-bar a {
+  color:var(--blush-lt);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.alert-bar a:hover { color:#fff; }
+.alert-bar .sep { opacity:0.35; margin:0 10px; }
+
+/* ─────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────── */
+.nav-outer {
+  position:sticky;
+  top:0;
+  z-index:500;
+  background:rgba(250,246,243,0.97);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-inner {
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 var(--pad);
+  height:var(--nav-h);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.nav-logo {
+  font-family:'Tenor Sans', serif;
+  font-size:1.22rem;
+  color:var(--ink);
+  letter-spacing:0.06em;
+  flex-shrink:0;
+  cursor:default;
+  white-space:nowrap;
+}
+.nav-logo span { color:var(--blush); }
+
+/* desktop links */
+.nav-links {
+  display:flex;
+  align-items:center;
+  list-style:none;
+  gap:2px;
+  flex-wrap:nowrap;
+}
+.nav-links > li { position:relative; }
+.nav-links > li > a {
+  display:block;
+  padding:6px 11px;
+  font-size:0.68rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  transition:color 0.18s;
+  white-space:nowrap;
+}
+.nav-links > li > a:hover { color:var(--blush); }
+
+/* dropdown */
+.nav-links .has-sub:hover .sub-menu { display:block; }
+.sub-menu {
+  display:none;
+  position:absolute;
+  top:calc(100% + 6px);
+  left:0;
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-top:2px solid var(--blush);
+  box-shadow:0 16px 40px rgba(0,0,0,0.09);
+  min-width:150px;
+  list-style:none;
+  z-index:600;
+}
+.sub-menu li a {
+  display:block;
+  padding:11px 16px;
+  font-size:0.68rem;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  border-bottom:1px solid var(--rule);
+  transition:background 0.15s, color 0.15s;
+}
+.sub-menu li:last-child a { border-bottom:none; }
+.sub-menu li a:hover { background:var(--bg-alt); color:var(--blush); }
+
+.nav-book {
+  margin-left:6px;
+  background:var(--blush) !important;
+  color:#fff !important;
+  border:none;
+  padding:9px 20px !important;
+  font-size:0.67rem !important;
+  letter-spacing:0.18em !important;
+  font-weight:700 !important;
+  transition:background 0.2s !important;
+}
+.nav-book:hover { background:var(--blush-dk) !important; color:#fff !important; }
+
+/* hamburger */
+.ham {
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:36px;
+  height:36px;
+  flex-shrink:0;
+  cursor:pointer;
+  background:none;
+  border:none;
+  padding:0;
+}
+.ham span {
+  display:block;
+  width:22px;
+  height:1.5px;
+  background:var(--ink);
+  transition:all 0.28s;
+  transform-origin:center;
+}
+.ham.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.ham.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+.ham.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+/* mobile drawer */
+.mobile-drawer {
+  display:none;
+  position:fixed;
+  top:calc(var(--nav-h) + 0px);
+  left:0; right:0; bottom:0;
+  background:var(--white);
+  z-index:490;
+  overflow-y:auto;
+  padding:0 0 80px;
+  flex-direction:column;
+}
+.mobile-drawer.open { display:flex; }
+.mob-link {
+  display:block;
+  padding:16px 28px;
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  border-bottom:1px solid var(--rule);
+  transition:color 0.15s, background 0.15s;
+}
+.mob-link:hover { color:var(--blush); background:var(--bg-alt); }
+.mob-link.sub { padding-left:44px; font-size:0.72rem; color:var(--muted); }
+.mob-book {
+  margin:24px 28px 0;
+  display:block;
+  text-align:center;
+  padding:15px;
+  background:var(--blush);
+  color:#fff;
+  font-size:0.75rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  border-radius:1px;
+}
+.mob-book:hover { background:var(--blush-dk); color:#fff; }
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero {
+  position:relative;
+  min-height:min(90vh, 700px);
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:#1c1614;
+}
+.hero-img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 30%;
+  opacity:0.55;
+}
+.hero-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(28,22,20,0.82) 0%,
+    rgba(28,22,20,0.45) 55%,
+    rgba(28,22,20,0.1) 100%
+  );
+}
+.hero-content {
+  position:relative;
+  z-index:2;
+  padding:80px var(--pad) 80px;
+  max-width:var(--max);
+  margin:0 auto;
+  width:100%;
+}
+.hero-eyebrow {
+  font-size:0.68rem;
+  font-weight:600;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:var(--blush-lt);
+  margin-bottom:18px;
+}
+.hero h1 {
+  font-family:'Tenor Sans', serif;
+  font-size:clamp(2.8rem, 7vw, 5.6rem);
+  color:#fff;
+  line-height:1.06;
+  letter-spacing:0.03em;
+  max-width:680px;
+  margin-bottom:22px;
+}
+.hero h1 em { font-style:italic; color:var(--blush-lt); font-family:'Raleway', sans-serif; font-weight:300; }
+.hero-sub {
+  font-size:0.88rem;
+  color:rgba(255,255,255,0.65);
+  font-weight:400;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  margin-bottom:40px;
+}
+.hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+
+/* ─────────────────────────────────────────
+   CONTACT STRIP
+───────────────────────────────────────── */
+.contact-strip {
+  background:var(--blush);
+  padding:0 var(--pad);
+}
+.contact-strip-inner {
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  align-items:stretch;
+  flex-wrap:wrap;
+}
+.cs-item {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 32px 16px 0;
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.85);
+  border-right:1px solid rgba(255,255,255,0.2);
+  margin-right:32px;
+}
+.cs-item:last-child { border-right:none; margin-right:0; }
+.cs-item a { color:#fff; }
+.cs-item a:hover { text-decoration:underline; text-underline-offset:3px; }
+.cs-icon { width:14px; height:14px; flex-shrink:0; }
+
+/* ─────────────────────────────────────────
+   SECTION SCAFFOLD
+───────────────────────────────────────── */
+.section { padding:clamp(60px,9vw,110px) 0; }
+.section-alt { background:var(--bg-alt); }
+.section-dark { background:var(--ink); }
+.section-white { background:var(--white); }
+
+.section-head { margin-bottom:52px; }
+.section-head.center { text-align:center; }
+.section-head.center .rule { margin:14px auto 20px; }
+.section-head .rule { margin:14px 0 20px; }
+.section-head h2 { font-size:clamp(1.9rem, 3.8vw, 2.9rem); }
+.section-head p { max-width:520px; margin-top:4px; }
+.section-head.center p { margin-left:auto; margin-right:auto; }
+
+/* ─────────────────────────────────────────
+   SERVICE CARDS  (home)
+───────────────────────────────────────── */
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+.svc-card {
+  background:var(--white);
+  border:1px solid var(--rule);
+  overflow:hidden;
+  transition:transform 0.28s, box-shadow 0.28s;
+  cursor:pointer;
+}
+.svc-card:hover { transform:translateY(-5px); box-shadow:0 18px 50px rgba(0,0,0,0.09); }
+.svc-card-thumb {
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.svc-card-body { padding:26px 24px 30px; }
+.svc-card-name {
+  font-family:'Tenor Sans', serif;
+  font-size:1.18rem;
+  color:var(--ink);
+  margin-bottom:9px;
+  letter-spacing:0.02em;
+}
+.svc-card-text { font-size:0.84rem; color:var(--muted); line-height:1.75; margin-bottom:18px; }
+.svc-card-link {
+  font-size:0.67rem;
+  font-weight:700;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--blush);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:gap 0.2s;
+}
+.svc-card-link:hover { gap:10px; }
+
+/* ─────────────────────────────────────────
+   PRODUCTS BAND (home)
+───────────────────────────────────────── */
+.products-band {
+  background:var(--ink);
+  overflow:hidden;
+}
+.products-band-inner {
+  max-width:var(--max);
+  margin:0 auto;
+  padding:clamp(60px,8vw,100px) var(--pad);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(40px,6vw,90px);
+  align-items:center;
+}
+.pb-text .t-label { color:var(--sand-lt); }
+.pb-text h2 { color:#fff; font-size:clamp(1.9rem,3.5vw,2.8rem); }
+.pb-text h2 em { font-style:italic; color:var(--blush-lt); font-family:'Raleway',sans-serif; font-weight:300; }
+.pb-text .rule { background:var(--sand); margin:14px 0 20px; }
+.pb-text p { color:rgba(255,255,255,0.55); font-size:0.9rem; line-height:1.85; max-width:440px; }
+.pb-text .btn-actions { margin-top:32px; display:flex; gap:12px; flex-wrap:wrap; }
+.pb-img {
+  position:relative;
+}
+.pb-img img {
+  width:100%;
+  border-radius:2px;
+  box-shadow:10px 10px 0 var(--blush-dk);
+}
+
+/* ─────────────────────────────────────────
+   CEO STRIP (home)
+───────────────────────────────────────── */
+.ceo-strip {
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:0;
+  align-items:stretch;
+  overflow:hidden;
+}
+.ceo-strip-img {
+  position:relative;
+  overflow:hidden;
+  min-height:480px;
+}
+.ceo-strip-img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
+}
+.ceo-strip-text {
+  background:var(--bg-alt);
+  padding:clamp(40px,6vw,80px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.ceo-strip-text h2 { font-size:clamp(1.8rem,3vw,2.6rem); }
+.ceo-strip-text .t-body { max-width:480px; }
+.ceo-creds {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0 28px;
+}
+.cred {
+  font-size:0.67rem;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  background:var(--white);
+  border:1px solid var(--rule);
+  padding:5px 12px;
+  white-space:nowrap;
+}
+
+/* ─────────────────────────────────────────
+   BOOKING CTA (home)
+───────────────────────────────────────── */
+.booking-cta {
+  background:var(--blush);
+  padding:clamp(50px,7vw,80px) var(--pad);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.booking-cta::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 80% 120% at 50% 120%, rgba(255,255,255,0.12), transparent);
+  pointer-events:none;
+}
+.booking-cta h2 {
+  font-family:'Tenor Sans', serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+  color:#fff;
+  letter-spacing:0.03em;
+  margin-bottom:14px;
+}
+.booking-cta p { color:rgba(255,255,255,0.75); font-size:0.9rem; max-width:480px; margin:0 auto 36px; }
+.booking-cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* ─────────────────────────────────────────
+   ── SERVICES PAGE ──
+───────────────────────────────────────── */
+.page-header {
+  background:var(--ink);
+  padding:clamp(44px,6vw,72px) var(--pad);
+  position:relative;
+  overflow:hidden;
+}
+.page-header::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(196,132,122,0.18), transparent 60%);
+  pointer-events:none;
+}
+.page-header-inner { position:relative; max-width:var(--max); margin:0 auto; }
+.page-header h1 {
+  font-family:'Tenor Sans', serif;
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  color:#fff;
+  letter-spacing:0.04em;
+  margin-bottom:8px;
+}
+.page-header p { color:rgba(255,255,255,0.5); font-size:0.82rem; letter-spacing:0.14em; text-transform:uppercase; }
+
+/* service category */
+.svc-category { padding:clamp(50px,7vw,80px) 0; border-bottom:1px solid var(--rule); }
+.svc-category:last-of-type { border-bottom:none; }
+.svc-cat-head { margin-bottom:40px; }
+.svc-cat-head h2 {
+  font-family:'Tenor Sans', serif;
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  color:var(--ink);
+  letter-spacing:0.03em;
+}
+
+/* product cards (services page) */
+.product-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  gap:20px;
+}
+.pcard {
+  background:var(--white);
+  border:1px solid var(--rule);
+  overflow:hidden;
+  transition:transform 0.24s, box-shadow 0.24s;
+}
+.pcard:hover { transform:translateY(-4px); box-shadow:0 14px 36px rgba(0,0,0,0.08); }
+.pcard-img {
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  background:var(--bg-alt);
+}
+.pcard-body { padding:16px 16px 20px; }
+.pcard-name {
+  font-family:'Tenor Sans', serif;
+  font-size:0.98rem;
+  color:var(--ink);
+  margin-bottom:4px;
+  line-height:1.3;
+}
+.pcard-detail { font-size:0.75rem; color:var(--muted); margin-bottom:8px; line-height:1.5; }
+.pcard-price { font-size:1.05rem; font-weight:700; color:var(--blush); font-family:'Tenor Sans', serif; }
+
+/* inline CTA band */
+.inline-cta {
+  background:var(--bg-alt);
+  border:1px solid var(--rule);
+  padding:44px 40px;
+  text-align:center;
+  margin-top:60px;
+}
+.inline-cta p {
+  font-family:'Raleway', sans-serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:1.1rem;
+  color:var(--ink-soft);
+  margin-bottom:24px;
+}
+
+/* ─────────────────────────────────────────
+   ── ABOUT / CEO PAGE ──
+───────────────────────────────────────── */
+.ceo-layout {
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:clamp(40px,6vw,80px);
+  align-items:start;
+}
+.ceo-img-block { position:relative; }
+.ceo-portrait {
+  width:100%;
+  border-radius:2px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.13);
+  display:block;
+}
+.ceo-nameplate {
+  background:var(--blush);
+  padding:20px 22px;
+}
+.ceo-nameplate h3 {
+  font-family:'Tenor Sans', serif;
+  font-size:1.15rem;
+  color:#fff;
+  letter-spacing:0.04em;
+  margin-bottom:2px;
+}
+.ceo-nameplate span { font-size:0.68rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.75); }
+.ceo-bio p { font-size:0.9rem; color:var(--muted); line-height:1.88; margin-bottom:16px; }
+.ceo-bio p:last-of-type { margin-bottom:0; }
+
+/* ─────────────────────────────────────────
+   ── PAYMENT PLANS ──
+───────────────────────────────────────── */
+.plans-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
+  gap:24px;
+  margin-top:52px;
+}
+.plan-card {
+  background:var(--white);
+  border:1px solid var(--rule);
+  padding:36px 30px 38px;
+  position:relative;
+  transition:box-shadow 0.24s;
+}
+.plan-card:hover { box-shadow:0 16px 44px rgba(0,0,0,0.08); }
+.plan-card.featured { border-color:var(--blush); border-width:2px; }
+.plan-chip {
+  position:absolute;
+  top:-11px; left:26px;
+  background:var(--blush);
+  color:#fff;
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  padding:3px 12px;
+}
+.plan-name { font-family:'Tenor Sans',serif; font-size:1.3rem; color:var(--ink); margin-bottom:6px; letter-spacing:0.03em; }
+.plan-price { font-family:'Tenor Sans',serif; font-size:2.4rem; color:var(--blush); line-height:1; margin-bottom:3px; }
+.plan-price sub { font-size:0.9rem; vertical-align:middle; }
+.plan-period { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:22px; }
+.plan-divider { height:1px; background:var(--rule); margin-bottom:22px; }
+.plan-features { list-style:none; margin-bottom:26px; }
+.plan-features li {
+  font-size:0.83rem; color:var(--ink-soft); padding:7px 0;
+  border-bottom:1px solid var(--rule);
+  display:flex; align-items:flex-start; gap:10px;
+}
+.plan-features li::before { content:'–'; color:var(--blush); flex-shrink:0; }
+.plan-note { font-size:0.73rem; color:var(--muted); font-style:italic; line-height:1.6; margin-top:14px; }
+
+/* ─────────────────────────────────────────
+   ── CONTACT FORM ──
+───────────────────────────────────────── */
+.contact-layout {
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:clamp(40px,6vw,80px);
+  align-items:start;
+}
+.contact-info h2 { font-size:clamp(1.8rem,3vw,2.6rem); }
+.contact-info .t-body { max-width:380px; margin-bottom:36px; }
+.c-detail {
+  padding:18px 0;
+  border-top:1px solid var(--rule);
+  display:grid;
+  grid-template-columns:40px 1fr;
+  gap:14px;
+  align-items:center;
+}
+.c-detail:last-of-type { border-bottom:1px solid var(--rule); }
+.c-icon-wrap {
+  width:36px; height:36px;
+  border-radius:50%;
+  background:var(--bg-alt);
+  border:1px solid var(--rule);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.c-icon-wrap svg { width:14px; height:14px; stroke:var(--blush); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.c-label { font-size:0.62rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-bottom:2px; }
+.c-val { font-family:'Tenor Sans',serif; font-size:1rem; color:var(--ink); }
+.c-val a { transition:color 0.18s; }
+.c-val a:hover { color:var(--blush); }
+
+/* form */
+.form-title { font-family:'Tenor Sans',serif; font-size:1.7rem; color:var(--ink); margin-bottom:6px; }
+.form-subtitle { font-size:0.82rem; color:var(--muted); margin-bottom:28px; }
+.form-row { margin-bottom:18px; }
+.form-row label { display:block; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width:100%;
+  font-family:'Raleway',sans-serif;
+  font-size:0.88rem;
+  color:var(--ink);
+  background:var(--white);
+  border:1px solid var(--rule);
+  padding:12px 14px;
+  border-radius:1px;
+  outline:none;
+  -webkit-appearance:none;
+  transition:border-color 0.2s;
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus { border-color:var(--blush); }
+.form-row textarea { resize:vertical; min-height:110px; line-height:1.6; }
+.form-2col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-submit { width:100%; padding:15px; }
+.form-note { font-size:0.72rem; color:var(--muted); margin-top:12px; line-height:1.6; }
+.form-note a { color:var(--blush); }
+.form-success {
+  display:none;
+  background:#f0faf0;
+  border:1px solid #b8d8b8;
+  color:#2a5a2a;
+  padding:14px 18px;
+  font-size:0.84rem;
+  margin-top:14px;
+  border-radius:1px;
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer {
+  background:var(--ink);
+  color:rgba(255,255,255,0.45);
+}
+.footer-top {
+  max-width:var(--max);
+  margin:0 auto;
+  padding:clamp(50px,7vw,80px) var(--pad) clamp(40px,5vw,60px);
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:clamp(30px,4vw,56px);
+}
+.f-brand-logo {
+  font-family:'Tenor Sans',serif;
+  font-size:1.3rem;
+  color:#fff;
+  letter-spacing:0.06em;
+  margin-bottom:14px;
+  display:block;
+}
+.f-brand-logo span { color:var(--blush-lt); }
+.f-desc { font-size:0.8rem; line-height:1.78; color:rgba(255,255,255,0.38); max-width:240px; margin-bottom:20px; }
+.f-contact-line { font-size:0.78rem; color:rgba(255,255,255,0.45); margin-bottom:6px; transition:color 0.18s; }
+.f-contact-line a { color:inherit; }
+.f-contact-line a:hover { color:var(--blush-lt); }
+.f-col h4 { font-size:0.62rem; font-weight:700; letter-spacing:0.28em; text-transform:uppercase; color:var(--sand-lt); margin-bottom:18px; }
+.f-col ul { list-style:none; }
+.f-col ul li { margin-bottom:10px; }
+.f-col ul li a { font-size:0.79rem; color:rgba(255,255,255,0.4); transition:color 0.18s; }
+.f-col ul li a:hover { color:var(--blush-lt); }
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,0.07);
+  max-width:var(--max);
+  margin:0 auto;
+  padding:20px var(--pad);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.footer-bottom p { font-size:0.68rem; color:rgba(255,255,255,0.28); letter-spacing:0.06em; }
+.footer-update { font-size:0.62rem; color:rgba(255,255,255,0.15); }
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+
+/* hide desktop nav, show hamburger */
+@media (max-width: 900px) {
+  .nav-links { display:none; }
+  .ham { display:flex; }
+}
+
+/* hero */
+@media (max-width: 768px) {
+  .hero { min-height:min(80vh, 560px); align-items:center; }
+  .hero-overlay {
+    background:linear-gradient(to bottom,
+      rgba(28,22,20,0.6) 0%,
+      rgba(28,22,20,0.55) 100%
+    );
+  }
+}
+
+/* contact strip wraps to 2 col on small */
+@media (max-width: 640px) {
+  .contact-strip-inner { gap:0; flex-direction:column; }
+  .cs-item { border-right:none; border-bottom:1px solid rgba(255,255,255,0.18); margin-right:0; padding:14px 0; width:100%; }
+  .cs-item:last-child { border-bottom:none; }
+}
+
+/* services grid */
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .services-grid { grid-template-columns:1fr; }
+}
+
+/* products band */
+@media (max-width: 800px) {
+  .products-band-inner { grid-template-columns:1fr; }
+  .pb-img { display:none; }
+}
+
+/* ceo strip */
+@media (max-width: 860px) {
+  .ceo-strip { grid-template-columns:1fr; }
+  .ceo-strip-img { min-height:320px; max-height:420px; }
+}
+
+/* service product grid */
+@media (max-width: 540px) {
+  .product-grid { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width: 360px) {
+  .product-grid { grid-template-columns:1fr; }
+}
+
+/* ceo layout */
+@media (max-width: 860px) {
+  .ceo-layout { grid-template-columns:1fr; }
+  .ceo-img-block { max-width:320px; }
+}
+
+/* contact layout */
+@media (max-width: 860px) {
+  .contact-layout { grid-template-columns:1fr; }
+}
+
+/* footer */
+@media (max-width: 860px) {
+  .footer-top { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .footer-top { grid-template-columns:1fr; }
+}
+
+/* form 2col */
+@media (max-width: 480px) {
+  .form-2col { grid-template-columns:1fr; }
+}
+
+/* plans */
+@media (max-width: 500px) {
+  .plans-grid { grid-template-columns:1fr; }
+}
+
+/* inline cta */
+@media (max-width: 540px) {
+  .inline-cta { padding:36px 24px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     ALERT BAR
+════════════════════════════════════════════ -->
+<div class="alert-bar">
+  <a href="https://www.skinmedica.com/us/skmmethod/" target="_blank" rel="noopener">CLICK HERE FOR A FREE SKIN ANALYSIS</a>
+  — Find Your SkinMedica® Method With AI Skin Analysis and LEARN about your skin's needs!!
+  <span class="sep">|</span>
+  <a href="https://www.skinmedica.com/us/allerewardsprogram.html" target="_blank" rel="noopener">Sign Up for Alle Rewards and start saving today!</a>
+</div>
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════ -->
+<div class="nav-outer">
+  <div class="nav-inner">
+    <div class="nav-logo">Reflections <span>of Beauty</span></div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li class="has-sub">
+        <a href="#about">About</a>
+        <ul class="sub-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#ceo">CEO</a></li>
+        </ul>
+      </li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">https://reflectionsofbeautyva.brilliantc</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#plans">Payment Plans</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact" class="nav-book">Book Now</a></li>
+    </ul>
+
+    <button class="ham" id="hamBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<!-- mobile drawer -->
+<nav class="mobile-drawer" id="mobileDrawer" role="navigation" aria-label="Mobile navigation">
+  <a class="mob-link" href="#home" onclick="closeDrawer()">Home</a>
+  <a class="mob-link" href="#about" onclick="closeDrawer()">About</a>
+  <a class="mob-link sub" href="#about" onclick="closeDrawer()">About</a>
+  <a class="mob-link sub" href="#ceo" onclick="closeDrawer()">CEO</a>
+  <a class="mob-link" href="#products" onclick="closeDrawer()">Products</a>
+  <a class="mob-link" href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener" onclick="closeDrawer()">https://reflectionsofbeautyva.brilliantc</a>
+  <a class="mob-link" href="#services" onclick="closeDrawer()">Services</a>
+  <a class="mob-link" href="#plans" onclick="closeDrawer()">Payment Plans</a>
+  <a class="mob-link" href="#contact" onclick="closeDrawer()">Contact</a>
+  <a class="mob-link" href="#events" onclick="closeDrawer()">Events</a>
+  <a class="mob-book" href="#contact" onclick="closeDrawer()">Book Now</a>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     HOME / HERO
+════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero">
+    <img
+      class="hero-img"
+      src="https://static.wixstatic.com/media/d17378_c6423510e0c34d989191c344cc618599f000.jpg/v1/fill/w_700,h_197,al_c,lg_1,q_80,enc_avif,quality_auto/d17378_c6423510e0c34d989191c344cc618599f000.jpg"
+      alt="Reflections of Beauty background"
+      loading="eager"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-content wrap">
+      <p class="hero-eyebrow">Virginia's Premier Medical Aesthetics</p>
+      <h1 class="t-display">Revitalizing<br><em>Radiance</em></h1>
+      <p class="hero-sub">Injectables · Facials · Hair Restoration · Skincare</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-solid">Book an Appointment</a>
+        <a href="#services" class="btn btn-ghost-white">Our Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact strip -->
+  <div class="contact-strip">
+    <div class="contact-strip-inner">
+      <div class="cs-item">
+        <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22.01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        <a href="tel:5715834479">(571) 583-4479</a>
+      </div>
+      <div class="cs-item">
+        <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:ethnicprideva@gmail.com">ethnicprideva@gmail.com</a>
+      </div>
+      <div class="cs-item">
+        <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+        Virginia — By Appointment
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SERVICES OVERVIEW
+════════════════════════════════════════════ -->
+<section class="section section-white" id="services-overview">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="t-label">What We Offer</p>
+      <h2 class="t-display">Services</h2>
+      <span class="rule rule-center" style="margin:14px auto 18px;"></span>
+      <p class="t-body" style="margin:0 auto;">Reflections of Beauty offers an array of beauty services. There are numerous treatments and services available. Please book a consultation for an assessment and recommendations.</p>
+    </div>
+    <div class="services-grid">
+      <a href="#services" class="svc-card">
+        <img
+          class="svc-card-thumb"
+          src="https://static.wixstatic.com/media/4011704d8ef941c6b1b362b46800220f.jpg/v1/fill/w_288,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4011704d8ef941c6b1b362b46800220f.jpg"
+          alt="Botox Injections" loading="lazy"/>
+        <div class="svc-card-body">
+          <div class="svc-card-name">Injectionables &amp; Fillers</div>
+          <p class="svc-card-text">Botox from $15/unit · Juvederm Ultra XC · Volbella · Voluma. Expert injectable treatments for natural-looking results.</p>
+          <span class="svc-card-link">View Services</span>
+        </div>
+      </a>
+      <a href="#services" class="svc-card">
+        <img
+          class="svc-card-thumb"
+          src="https://static.wixstatic.com/media/2e2a49_5446b99efef6467b8bb512150a2f20c3~mv2.jpg/v1/fill/w_301,h_225,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2e2a49_5446b99efef6467b8bb512150a2f20c3~mv2.jpg"
+          alt="Facial Rejuvenation" loading="lazy"/>
+        <div class="svc-card-body">
+          <div class="svc-card-name">Facial Rejuvenation</div>
+          <p class="svc-card-text">Dermaplaning, Microdermabrasion, Chemical Peels, Microneedling &amp; PRP. Treatments from $150.</p>
+          <span class="svc-card-link">View Services</span>
+        </div>
+      </a>
+      <a href="#services" class="svc-card">
+        <img
+          class="svc-card-thumb"
+          src="https://static.wixstatic.com/media/4be2460f7dc640e5b95496528a1c5da8.jpg/v1/fill/w_301,h_209,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4be2460f7dc640e5b95496528a1c5da8.jpg"
+          alt="Hair Restoration" loading="lazy"/>
+        <div class="svc-card-body">
+          <div class="svc-card-name">Hair Restoration</div>
+          <p class="svc-card-text">PRP-based hairline and full scalp restoration. Hairline only $600 · Full scalp $1,000.</p>
+          <span class="svc-card-link">View Services</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PRODUCTS BAND
+════════════════════════════════════════════ -->
+<section id="products" class="products-band">
+  <div class="products-band-inner">
+    <div class="pb-text">
+      <p class="t-label" style="color:var(--sand-lt);">SkinCare</p>
+      <h2 class="t-display" style="color:#fff;font-size:clamp(1.9rem,3.5vw,2.8rem);">Products</h2>
+      <span class="rule" style="background:var(--sand);margin:14px 0 20px;"></span>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.9rem;line-height:1.85;max-width:440px;">We help our clients take care of their skin. We use <strong style="color:rgba(255,255,255,0.8);">SkinMedica</strong> skin care products. SkinMedica has been a leader in professional-grade skincare, delivering products that revolutionize skincare.</p>
+      <div class="btn-actions" style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener" class="btn btn-solid">Shop Skin Medica Products</a>
+        <a href="https://www.skinmedica.com/us/skmmethod/" target="_blank" rel="noopener" class="btn btn-ghost-white">Free Skin Analysis</a>
+      </div>
+    </div>
+    <div class="pb-img">
+      <img
+        src="https://static.wixstatic.com/media/11062b_041d3aa69cba442895978368583bd90d~mv2.jpeg/v1/fill/w_549,h_366,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_041d3aa69cba442895978368583bd90d~mv2.jpeg"
+        alt="Smooth Skin" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CEO STRIP
+════════════════════════════════════════════ -->
+<section class="ceo-strip section-white" id="about">
+  <div class="ceo-strip-img">
+    <img
+      src="https://static.wixstatic.com/media/d17378_a64e525da78b49ca877ddeb5ce68e35f~mv2.png/v1/fill/w_488,h_651,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d17378_a64e525da78b49ca877ddeb5ce68e35f~mv2.png"
+      alt="Robin Durr FNP-BC" loading="lazy"/>
+  </div>
+  <div class="ceo-strip-text">
+    <p class="t-label">About / CEO</p>
+    <h2 class="t-display" style="font-size:clamp(1.8rem,3vw,2.6rem);margin-top:10px;margin-bottom:12px;">Robin Durr,<br>FNP-BC</h2>
+    <span class="rule" style="margin:0 0 18px;"></span>
+    <p class="t-body" style="margin-bottom:16px;">Robin Durr, MSN, FNP-BC, is an esteemed healthcare professional with 30 years of experience as a Registered Nurse and 27 years as a Family Nurse Practitioner. Her true passion lies in the field of Aesthetic Medicine.</p>
+    <p class="t-body">As Owner/CEO of Reflections of Beauty, Robin continues to transform standards within Aesthetics by prioritizing exceptional patient care — ensuring every client leaves feeling empowered by their own unique allure.</p>
+    <div class="ceo-creds">
+      <span class="cred">MSN · FNP-BC</span>
+      <span class="cred">30 Yrs RN</span>
+      <span class="cred">27 Yrs FNP</span>
+      <span class="cred">Aesthetic Medicine</span>
+      <span class="cred">Reveal Med Spa Director</span>
+    </div>
+    <a href="#ceo" class="btn btn-ghost" style="align-self:flex-start;">Full Biography</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SERVICES — FULL PAGE
+════════════════════════════════════════════ -->
+<section id="services">
+  <div class="page-header">
+    <div class="page-header-inner wrap">
+      <h1>Services</h1>
+      <p>Reflections of Beauty · Injectables · Facials · Hair Restoration</p>
+    </div>
+  </div>
+
+  <!-- Injectables -->
+  <div class="section section-white">
+    <div class="wrap">
+      <div class="svc-cat-head">
+        <p class="t-label">Category 01</p>
+        <h2 class="t-display" style="font-size:clamp(1.6rem,2.8vw,2.2rem);margin-top:8px;">Injectables &amp; Fillers</h2>
+        <span class="rule" style="margin:12px 0 0;"></span>
+      </div>
+      <div class="product-grid">
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_6d8ab44a6df64df3848a9b357ff050ec~mv2.jpeg/v1/fill/w_269,h_315,al_c,lg_1,q_80,enc_avif,quality_auto/Botox%202.jpeg" alt="Botox" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Botox</div><div class="pcard-price">$15.00 / unit</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_55acf922c41e4a93a6d9c5be65241f9a~mv2.jpg/v1/crop/x_187,y_0,w_2025,h_2372/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Juvederm-Ultra-XC-New.jpg" alt="Juvederm Ultra XC" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Juvederm Ultra XC</div><div class="pcard-detail">0.55 ml · 1 syringe</div><div class="pcard-price">$400.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_55acf922c41e4a93a6d9c5be65241f9a~mv2.jpg/v1/crop/x_187,y_0,w_2025,h_2372/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Juvederm-Ultra-XC-New.jpg" alt="Juvederm Ultra XC 1 syringe" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Juvederm Ultra XC</div><div class="pcard-detail">1 syringe</div><div class="pcard-price">$600.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_cfc2c03b60704c6d8d3c82e2f3d2052e~mv2.jpg/v1/crop/x_60,y_0,w_648,h_759/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Juvederm-Plus-XC-768x759.jpg" alt="Juvederm Ultra Plus XC" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Juvederm Ultra Plus XC</div><div class="pcard-detail">1 syringe</div><div class="pcard-price">$700.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_9523e4d3606e4cccb03c0ec6a247913a~mv2.jpg/v1/crop/x_60,y_0,w_648,h_759/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Juvederm-Volbella-New-768x759.jpg" alt="Juvederm Volbella XC" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Juvederm Volbella XC</div><div class="pcard-detail">1 syringe</div><div class="pcard-price">$750.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/059e9b_66623a749d0a43ec820511c14a695568~mv2.jpg/v1/crop/x_88,y_0,w_1024,h_1200/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/juvedermvolumaxc.jpg" alt="Juvederm Voluma" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Juvederm Voluma</div><div class="pcard-detail">1 syringe</div><div class="pcard-price">$800.00</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Facial Rejuvenation -->
+  <div class="section section-alt">
+    <div class="wrap">
+      <div class="svc-cat-head">
+        <p class="t-label">Category 02</p>
+        <h2 class="t-display" style="font-size:clamp(1.6rem,2.8vw,2.2rem);margin-top:8px;">Facial Rejuvenation</h2>
+        <span class="rule" style="margin:12px 0 0;"></span>
+      </div>
+      <div class="product-grid">
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_820fbd5ebdc44ef19fe5547fe6da73ce~mv2.jpeg/v1/fill/w_225,h_256,al_c,lg_1,q_80,enc_avif,quality_auto/Dermaplaning.jpeg" alt="Dermaplaning" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Dermaplaning</div><div class="pcard-price">$150.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/11062b_389e0a10c06648fab03c3b68821c3150~mv2.jpg/v1/crop/x_1077,y_0,w_2845,h_3333/fill/w_286,h_326,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Microdermabrasion.jpg" alt="Microdermabrasion" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Microderma Abrasion</div><div class="pcard-price">$150.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_9fb8f128f043495cbc3074a0119edf22~mv2.jpeg/v1/crop/x_47,y_0,w_168,h_192/fill/w_235,h_268,al_c,lg_1,q_80,enc_avif,quality_auto/Vitalize%20Peel.jpeg" alt="Vitalize Peel" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Vitalize Chemical Peel</div><div class="pcard-price">$150.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_5b4a3908356f40cbb430ed6c7280fa4e~mv2.jpeg/v1/crop/x_53,y_0,w_164,h_187/fill/w_230,h_262,al_c,lg_1,q_80,enc_avif,quality_auto/Chemical%20Peel.jpeg" alt="Revitalize Peel" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Revitalize Peel</div><div class="pcard-price">$175.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_68b6b326c37548ad9627a41679dbfb15~mv2.jpeg/v1/crop/x_44,y_0,w_170,h_194/fill/w_238,h_271,al_c,lg_1,q_80,enc_avif,quality_auto/Microneedling.jpeg" alt="Microneedling" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Microneedling</div><div class="pcard-detail">Depending on area treated</div><div class="pcard-price">$450 – $600</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_a0bcbd3509d84b1086aaecf4eddbe4b1~mv2.jpeg/v1/crop/x_57,y_0,w_161,h_183/fill/w_225,h_256,al_c,lg_1,q_80,enc_avif,quality_auto/Microneedling2.jpeg" alt="Microneedling with PRP" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Microneedling with PRP</div><div class="pcard-detail">Depending on area treated</div><div class="pcard-price">$550 – $800</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hair Restoration -->
+  <div class="section section-white">
+    <div class="wrap">
+      <div class="svc-cat-head">
+        <p class="t-label">Category 03</p>
+        <h2 class="t-display" style="font-size:clamp(1.6rem,2.8vw,2.2rem);margin-top:8px;">Hair Restoration</h2>
+        <span class="rule" style="margin:12px 0 0;"></span>
+      </div>
+      <div class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));">
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/d17378_280bdace31704073a35fb102700696a0~mv2.jpeg/v1/fill/w_201,h_235,al_c,lg_1,q_80,enc_avif,quality_auto/Hairline.jpeg" alt="Hair Restoration Hairline" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Hair Restoration — Hairline Only</div><div class="pcard-price">$600.00</div></div>
+        </div>
+        <div class="pcard">
+          <img class="pcard-img" src="https://static.wixstatic.com/media/11062b_ee7e9b55c41a43dcbac538d575ac1fb3~mv2.jpg/v1/crop/x_1077,y_0,w_2845,h_3333/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hair%20Serum.jpg" alt="Hair Restoration Scalp" loading="lazy"/>
+          <div class="pcard-body"><div class="pcard-name">Hair Restoration — Full Scalp</div><div class="pcard-price">$1,000.00</div></div>
+        </div>
+      </div>
+
+      <!-- inline cta -->
+      <div class="inline-cta">
+        <p>"Please book a consultation for an assessment and personalized recommendations."</p>
+        <a href="#contact" class="btn btn-solid">Book An Appointment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CEO FULL BIO
+════════════════════════════════════════════ -->
+<section id="ceo" class="section section-alt">
+  <div class="wrap">
+    <div class="ceo-layout">
+      <div class="ceo-img-block">
+        <img
+          class="ceo-portrait"
+          src="https://static.wixstatic.com/media/d17378_a64e525da78b49ca877ddeb5ce68e35f~mv2.png/v1/fill/w_488,h_651,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d17378_a64e525da78b49ca877ddeb5ce68e35f~mv2.png"
+          alt="Robin Durr FNP-BC" loading="lazy"/>
+        <div class="ceo-nameplate">
+          <h3>Robin Durr, FNP-BC</h3>
+          <span>Chief Executive Officer, Clinician</span>
+        </div>
+      </div>
+      <div class="ceo-bio">
+        <p class="t-label" style="margin-bottom:10px;">Leadership</p>
+        <h2 class="t-display" style="font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:10px;">Chief Executive<br>Officer, Clinician</h2>
+        <span class="rule" style="margin:0 0 22px;"></span>
+        <p>Robin Durr, MSN, FNP-BC, is an esteemed healthcare professional with 30 years of experience as a Registered Nurse and 27 years as a Family Nurse Practitioner. Her expertise spans various healthcare settings, including Geriatrics, Pediatric Primary Care, Emergency Medicine, Research, and Military Health Care. However, her true passion lies in the field of Aesthetic Medicine.</p>
+        <p>In 2008, Robin served as the Director of Nursing for Reveal Med Spa. In this role, she oversaw nursing programs across seven centers in three states. Her responsibilities included training nurses, performing procedures herself, and ensuring staffing initiatives and policy development were executed effectively.</p>
+        <p>Throughout her career journey thus far, Robin has received numerous awards for her outstanding contributions to multiple organizations. She remains committed to providing world-class patient care while embracing the unique beauty within each individual.</p>
+        <p>Dedicated to enhancing patient care experiences through innovative approaches that celebrate uniqueness and empower individuals to embrace their inner beauty, Robin strives for excellence in service delivery operations by optimizing workforce performance and utilizing best practices.</p>
+        <p>As Owner/CEO of Reflections of Beauty, Robin Durr continues to transform standards within the field of Aesthetics by prioritizing exceptional patient care above all else — ensuring every client leaves feeling empowered by their own unique allure.</p>
+        <div style="margin-top:28px;">
+          <a href="#contact" class="btn btn-solid">Contact for an Appointment or Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PAYMENT PLANS
+════════════════════════════════════════════ -->
+<section id="plans" class="section section-white">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="t-label">Financing</p>
+      <h2 class="t-display" style="font-size:clamp(1.9rem,3.5vw,2.8rem);margin-top:8px;">Payment Plans</h2>
+      <span class="rule" style="margin:14px 0 18px;"></span>
+      <p class="t-body">We believe everyone deserves access to quality aesthetic care. Contact us to discuss which financing option works best for you.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Pay in Full</div>
+        <div class="plan-price">Full<sub> pay</sub></div>
+        <div class="plan-period">One-time payment</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>No interest, no fees</li>
+          <li>All services eligible</li>
+          <li>Cash, card, or check</li>
+          <li>Immediate booking confirmation</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Book Now</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-chip">Popular</div>
+        <div class="plan-name">Split Pay</div>
+        <div class="plan-price">50<sub>% down</sub></div>
+        <div class="plan-period">Balance due at appointment</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>50% deposit to reserve your date</li>
+          <li>Remaining balance paid day-of</li>
+          <li>All services eligible</li>
+          <li>Simple &amp; straightforward</li>
+        </ul>
+        <a href="#contact" class="btn btn-solid">Book Now</a>
+        <p class="plan-note">Contact us to confirm availability and set up your split payment arrangement.</p>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Financing</div>
+        <div class="plan-price">0<sub>% options</sub></div>
+        <div class="plan-period">Third-party financing</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>CareCredit accepted</li>
+          <li>Low monthly payments available</li>
+          <li>Quick approval process</li>
+          <li>Applicable to all services</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Ask Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     BOOKING CTA BAND
+════════════════════════════════════════════ -->
+<div class="booking-cta">
+  <div style="position:relative;">
+    <h2>Book an Appointment</h2>
+    <p>Reflections of Beauty — walk in looking good, walk out looking great. Book a consultation and we'll create a personalized treatment plan just for you.</p>
+    <div class="booking-cta-btns">
+      <a href="#contact" class="btn btn-ghost-white">Book an Appointment</a>
+      <a href="tel:5715834479" class="btn btn-solid" style="background:var(--ink);border-color:var(--ink);">Call (571) 583-4479</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     EVENTS
+════════════════════════════════════════════ -->
+<section id="events" class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="t-label">Calendar</p>
+      <h2 class="t-display" style="font-size:clamp(1.9rem,3.5vw,2.8rem);margin-top:8px;">Events</h2>
+      <span class="rule" style="margin:14px 0 18px;"></span>
+      <p class="t-body">Stay updated on our latest events, promotions, and open house appointments.</p>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--rule);padding:60px 40px;text-align:center;">
+      <p style="font-family:'Tenor Sans',serif;font-size:1.4rem;color:var(--ink-soft);margin-bottom:10px;">No upcoming events scheduled at this time.</p>
+      <p style="font-size:0.8rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;">Check back soon or contact us for updates.</p>
+      <div style="margin-top:28px;">
+        <a href="#contact" class="btn btn-solid">Get Notified</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CONTACT / BOOK
+════════════════════════════════════════════ -->
+<section id="contact" class="section section-white">
+  <div class="wrap">
+    <div class="contact-layout">
+
+      <!-- info col -->
+      <div class="contact-info">
+        <p class="t-label" style="margin-bottom:10px;">Get In Touch</p>
+        <h2 class="t-display" style="font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:10px;">Book an<br>Appointment</h2>
+        <span class="rule" style="margin:0 0 20px;"></span>
+        <p class="t-body" style="margin-bottom:36px;">Ready to book? Reach out by phone, email, or fill out the form and we'll get back to you promptly to confirm your appointment.</p>
+
+        <div class="c-detail">
+          <div class="c-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22.01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <div>
+            <div class="c-label">Phone</div>
+            <div class="c-val"><a href="tel:5715834479">(571) 583-4479</a></div>
+          </div>
+        </div>
+        <div class="c-detail">
+          <div class="c-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="c-label">Email</div>
+            <div class="c-val"><a href="mailto:ethnicprideva@gmail.com">ethnicprideva@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="c-detail">
+          <div class="c-icon-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+          </div>
+          <div>
+            <div class="c-label">Location</div>
+            <div class="c-val">Virginia — By Appointment</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form col -->
+      <div class="contact-form-col">
+        <div class="form-title">Send a Message</div>
+        <p class="form-subtitle">Fill out the form below and we'll be in touch shortly.</p>
+        <form id="apptForm" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-2col">
+            <div class="form-row">
+              <label for="fn">First Name</label>
+              <input type="text" id="fn" placeholder="Jane" required autocomplete="given-name"/>
+            </div>
+            <div class="form-row">
+              <label for="ln">Last Name</label>
+              <input type="text" id="ln" placeholder="Smith" required autocomplete="family-name"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="em">Email Address</label>
+            <input type="email" id="em" placeholder="jane@email.com" required autocomplete="email"/>
+          </div>
+          <div class="form-row">
+            <label for="ph">Phone Number</label>
+            <input type="tel" id="ph" placeholder="(555) 000-0000" autocomplete="tel"/>
+          </div>
+          <div class="form-row">
+            <label for="svc">Service of Interest</label>
+            <select id="svc">
+              <option value="">Select a service...</option>
+              <optgroup label="Injectables &amp; Fillers">
+                <option>Botox</option>
+                <option>Juvederm Ultra XC (0.55 ml)</option>
+                <option>Juvederm Ultra XC (1 syringe)</option>
+                <option>Juvederm Ultra Plus XC</option>
+                <option>Juvederm Volbella XC</option>
+                <option>Juvederm Voluma</option>
+              </optgroup>
+              <optgroup label="Facial Rejuvenation">
+                <option>Dermaplaning</option>
+                <option>Microdermabrasion</option>
+                <option>Vitalize Chemical Peel</option>
+                <option>Revitalize Peel</option>
+                <option>Microneedling</option>
+                <option>Microneedling with PRP</option>
+              </optgroup>
+              <optgroup label="Hair Restoration">
+                <option>Hair Restoration — Hairline Only</option>
+                <option>Hair Restoration — Full Scalp</option>
+              </optgroup>
+              <option>SkinMedica Products</option>
+              <option>General Consultation</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="msg">Message / Additional Notes</label>
+            <textarea id="msg" placeholder="Tell us about your goals or any questions you have..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid form-submit">Send Message</button>
+          <p class="form-note">
+            We'll respond within 1–2 business days to confirm your appointment.
+            For immediate assistance call <a href="tel:5715834479">(571) 583-4479</a>.
+          </p>
+          <div class="form-success" id="formSuccess">
+            ✓ &nbsp;Thank you! Your message has been received. We'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="f-brand-logo">Reflections <span>of Beauty</span></span>
+      <p class="f-desc">Virginia's trusted provider of medical aesthetics, injectables, facial rejuvenation, hair restoration, and professional-grade SkinMedica® skincare.</p>
+      <p class="f-contact-line"><a href="tel:5715834479">Phone: (571) 583-4479</a></p>
+      <p class="f-contact-line"><a href="mailto:ethnicprideva@gmail.com">Email: ethnicprideva@gmail.com</a></p>
+    </div>
+    <div class="f-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ceo">— CEO</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">https://reflectionsofbeautyva.brilliantc</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Injectionables &amp; Fillers</a></li>
+        <li><a href="#services">Facial Rejuvenation</a></li>
+        <li><a href="#services">Hair Restoration</a></li>
+        <li><a href="#plans">Payment Plans</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#contact">Book an Appointment</a></li>
+        <li><a href="https://www.skinmedica.com/us/skmmethod/" target="_blank" rel="noopener">Free Skin Analysis</a></li>
+        <li><a href="https://www.skinmedica.com/us/allerewardsprogram.html" target="_blank" rel="noopener">Alle Rewards</a></li>
+        <li><a href="https://reflectionsofbeautyva.brilliantconnections.com/" target="_blank" rel="noopener">Shop SkinMedica</a></li>
+        <li><a href="#contact">Log In</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Reflections of Beauty &nbsp;·&nbsp; Email: <a href="mailto:ethnicprideva@gmail.com" style="color:inherit;">ethnicprideva@gmail.com</a> &nbsp;·&nbsp; Phone: (571) 583-4479</p>
+    <p class="footer-update">Website Updated 8/07/24</p>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════
+     JS — hamburger only, no routing
+════════════════════════════════════════════ -->
+<script>
+var hamBtn    = document.getElementById('hamBtn');
+var drawer    = document.getElementById('mobileDrawer');
+var isOpen    = false;
+
+function openDrawer() {
+  isOpen = true;
+  drawer.classList.add('open');
+  hamBtn.classList.add('open');
+  hamBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  isOpen = false;
+  drawer.classList.remove('open');
+  hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+hamBtn.addEventListener('click', function() {
+  if (isOpen) closeDrawer(); else openDrawer();
+});
+
+// close on resize to desktop
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 900 && isOpen) closeDrawer();
+});
+
+// close drawer when any anchor in drawer is clicked
+drawer.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() { closeDrawer(); });
+});
+
+// form submit
+function handleSubmit(e) {
+  e.preventDefault();
+  var success = document.getElementById('formSuccess');
+  var form    = document.getElementById('apptForm');
+  success.style.display = 'block';
+  form.querySelectorAll('input, select, textarea, button').forEach(function(el) {
+    el.disabled = true;
+  });
+  success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+
+</body>
+</html>
