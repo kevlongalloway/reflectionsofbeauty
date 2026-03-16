@@ -34,7 +34,7 @@
    BASE
 ───────────────────────────────────────── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
 body {
   font-family:'Raleway', sans-serif;
   font-weight:400;
@@ -42,6 +42,7 @@ body {
   background:var(--bg);
   color:var(--ink);
   overflow-x:hidden;
+  width:100%;
   line-height:1.65;
 }
 img { display:block; max-width:100%; height:auto; }
@@ -357,7 +358,7 @@ button { cursor:pointer; font-family:inherit; border:none; background:none; }
   color:#fff;
   line-height:1.06;
   letter-spacing:0.03em;
-  max-width:680px;
+  max-width:min(680px, 100%);
   margin-bottom:22px;
 }
 .hero h1 em { font-style:italic; color:var(--blush-lt); font-family:'Raleway', sans-serif; font-weight:300; }
@@ -498,7 +499,7 @@ button { cursor:pointer; font-family:inherit; border:none; background:none; }
 ───────────────────────────────────────── */
 .ceo-strip {
   display:grid;
-  grid-template-columns:420px 1fr;
+  grid-template-columns:minmax(0, 420px) 1fr;
   gap:0;
   align-items:stretch;
   overflow:hidden;
